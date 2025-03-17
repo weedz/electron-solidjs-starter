@@ -1,0 +1,26 @@
+{
+  "name": "electron-solidjs-starter",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "lint": "oxlint -c .oxlintrc.json --tsconfig ./tsconfig.json -D correctness -D perf --import-plugin -D no-cycle --promise-plugin",
+    "lint:tsc": "tsc --noEmit",
+    "build": "rm -rf dist;mkdir dist && cp static/* dist/ && node scripts/build.mjs",
+    "dev": "NODE_ENV=development pnpm run build"
+  },
+  "keywords": [],
+  "author": "Linus Björklund",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "electron": "^35.0.2",
+    "esbuild": "^0.25.1",
+    "esbuild-plugin-solid": "^0.6.0",
+    "oxlint": "^0.16.0",
+    "solid-js": "^1.9.5",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
+}
